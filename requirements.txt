@@ -4,3 +4,6 @@ aiopyql
 easyadmin
 easy-auth[client]
 gunicorn
+uvloop
+example
+httptools
