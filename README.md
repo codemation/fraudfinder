@@ -87,6 +87,6 @@ docker run --name fraud-finder \
 ### Stack
 - FastAPI - Web Framework
 - Gunicorn / Uvicorn - ASGI web server
-- EasyAuth - JWT Authentication / Authorization framework
-- EasyAdmin - GUI FrontEnd Generator 
-- aiopyql - Database & Caching
+- [EasyAuth](https://github.com/codemation/easyauth) - JWT Authentication / Authorization framework
+- [EasyAdmin](https://github.com/codemation/easyadmin) - GUI FrontEnd Generator 
+- [aiopyql](https://github.com/codemation/aiopyql) - Database & Caching
