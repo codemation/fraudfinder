@@ -2,5 +2,5 @@ fastapi
 uvicorn
 aiopyql
 easyadmin
-easyauth
+easy-auth[client]
 gunicorn
