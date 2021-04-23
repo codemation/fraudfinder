@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+aiopyql
+easyadmin
+easyauth
+gunicorn
