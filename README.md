@@ -8,7 +8,11 @@ Build local container
 ```bash
 docker build docker/ -t fraud_finder:local 
 ```
-Pull From Repo
+
+Pull From Repo - automatic if targeted during docker run
+```bash
+docker pull joshjamison/fraud-finder:0.0.0 
+```
 
 
 ### Determine local IP Address
@@ -77,8 +81,7 @@ docker run --name fraud-finder \
      -e KEY_NAME=test_key \
      -e TOKEN_SERVER_PATH='http://192.168.1.18:8220/auth/token' \
      -p 8221:8221 \
-     -d fraud_finder:local
-```
+     -d joshjamison/fraud-finder:0.0.0
 
 ### Permissions 
 - Fraud Finder will allow users within the 'administrators' group to the API / GUI. 
