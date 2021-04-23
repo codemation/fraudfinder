@@ -82,6 +82,7 @@ docker run --name fraud-finder \
      -e TOKEN_SERVER_PATH='http://192.168.1.18:8220/auth/token' \
      -p 8221:8221 \
      -d joshjamison/fraud-finder:0.0.0
+```
 
 ### Permissions 
 - Fraud Finder will allow users within the 'administrators' group to the API / GUI. 
