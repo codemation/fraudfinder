@@ -11,7 +11,6 @@ docker build docker/ -t fraud_finder:local
 Pull From Repo
 
 
-
 ### Determine local IP Address
 Verify the local IP address of the Docker host, this is required to allow communication via the local authenticaiton server
 
@@ -23,8 +22,9 @@ enp60s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.1.18  netmask 255.255.255.0  broadcast 192.168.1.255
 ```
 
-### Start Authenticaiton Server
+### Start Auth Server
 
+```bash
 mkdir -p $(pwd)/easyauth-vol
 
 docker run --name easyauth \
@@ -39,6 +39,7 @@ docker run --name easyauth \
     -v $(pwd)/easyauth-vol:/mnt/easyauth \
     -p 8220:8220 \
     -d joshjamison/easyauth:v0.0.0
+```
 
 #### Pull Adminstrator Password from logs
 
@@ -75,6 +76,7 @@ docker run --name fraud-finder \
      -e KEY_PATH=/mnt/database \
      -e KEY_NAME=test_key \
      -e TOKEN_SERVER_PATH='http://192.168.1.18:8220/auth/token' \
+     -p 8221:8221 \
      -d fraud_finder:local
 ```
 
